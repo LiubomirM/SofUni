@@ -27,6 +27,7 @@ public class Tennis
             {
                 System.Environment.Exit(-1);
             }
+            ResetAllPosition();
         } while (!(players == "1" || players == "2"));
                         
         if (players == "1")
