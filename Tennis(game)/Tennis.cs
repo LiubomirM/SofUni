@@ -11,46 +11,103 @@ namespace Tennis
     {
         static void Main()
         {
-            Console.Title = "Tennis";
-            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.Title = "  Tennis";
             Console.BufferHeight = Console.WindowHeight;
-            Console.BufferWidth = Console.WindowWidth = 80;
-            while (true)
+            Console.BufferWidth = Console.WindowWidth = 80;           
+            string players;
+           
+            do
             {
-                if (Console.KeyAvailable)
-                {
-                    ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-                    while (Console.KeyAvailable)
-                    {
-                        Console.ReadKey(true);
-                    }
-                    if (keyInfo.Key == ConsoleKey.W)
-                    {
-                        MoveFirstPlayerUp();
-                    }
-                    if (keyInfo.Key == ConsoleKey.S)
-                    {
-                        MoveFirstPlayerDown();
-                    }
-                    if (keyInfo.Key == ConsoleKey.UpArrow)
-                    {
-                        MoveSecondPlayerUp();
-                    }
-                    if (keyInfo.Key == ConsoleKey.DownArrow)
-                    {
-                        MoveSecondPlayerDown();
-                    }
-                }
-                MoveBall();
+                Console.BackgroundColor = ConsoleColor.DarkGreen;
                 Console.Clear();
-                DrawFirstPlayer();
-                DrawSecondPlayer();
-                DrawBall();
-                PrintResult();
-                Thread.Sleep((int)(50 - speed));
+                Console.ForegroundColor=ConsoleColor.Yellow;
+                Console.SetCursorPosition(Console.WindowWidth / 2 - 31, Console.BufferHeight / 2 - 1);
+                Console.Write("Press (1) for one player, (2) for two players or (q) to quit: ");
+                players = Console.ReadLine();
+                if (players == "q")
+                {
+                    System.Environment.Exit(-1);
+                }
+            } while (!(players == "1" || players == "2"));
+                        
+            if (players == "1")
+            {
+                while (true)
+                {
+                    if (Console.KeyAvailable)
+                    {
+                        ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                        while (Console.KeyAvailable)
+                        {
+                            Console.ReadKey(true);
+                        }
+                        if (keyInfo.Key == ConsoleKey.UpArrow)
+                        {
+                            MoveSecondPlayerUp();
+                        }
+                        if (keyInfo.Key == ConsoleKey.DownArrow)
+                        {
+                            MoveSecondPlayerDown();
+                        }
+                        if (keyInfo.Key == ConsoleKey.Escape)
+                        {
+                            Main();
+                        }
+                    }
+                    MoveBall();
+                    Console.Clear();
+                    DrawFirstPlayer();
+                    PlayerComputer();
+                    DrawSecondPlayer();
+                    DrawBall();
+                    PrintResult();
+                    Thread.Sleep((int) (50 - speed));
+                }
             }
-
+           
+            if (players == "2")
+            {
+                while (true)
+                {
+                    if (Console.KeyAvailable)
+                    {
+                        ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                        while (Console.KeyAvailable)
+                        {
+                            Console.ReadKey(true);
+                        }
+                        if (keyInfo.Key == ConsoleKey.W)
+                        {
+                            MoveFirstPlayerUp();
+                        }
+                        if (keyInfo.Key == ConsoleKey.S)
+                        {
+                            MoveFirstPlayerDown();
+                        }
+                        if (keyInfo.Key == ConsoleKey.UpArrow)
+                        {
+                            MoveSecondPlayerUp();
+                        }
+                        if (keyInfo.Key == ConsoleKey.DownArrow)
+                        {
+                            MoveSecondPlayerDown();
+                        }
+                        if (keyInfo.Key == ConsoleKey.Escape)
+                        {
+                            Main();
+                        }
+                    }
+                    MoveBall();
+                    Console.Clear();
+                    DrawFirstPlayer();
+                    DrawSecondPlayer();
+                    DrawBall();
+                    PrintResult();
+                    Thread.Sleep((int)(50 - speed));
+                }
+            }
         }
+
         static int padSize = 7;
         static int ballPositionX = Console.WindowWidth / 2;
         static int ballPositionY = Console.WindowHeight / 2;
@@ -61,6 +118,7 @@ namespace Tennis
         static int firstPlayerPoints = 0;
         static int secondPlayerPoints = 0;
         static double speed = 0;
+        static Random randomGenerator = new Random();
         
         static void PrintAtPosition(int x, int y, char symbol)
         {
@@ -111,6 +169,7 @@ namespace Tennis
                 firstPlayerPosition--;
             }           
         }
+       
         static void MoveFirstPlayerDown()
         {
             if (firstPlayerPosition + padSize < Console.WindowHeight)
@@ -126,6 +185,7 @@ namespace Tennis
                 secondPlayerPosition--;
             }
         }
+        
         static void MoveSecondPlayerDown()
         {
             if (secondPlayerPosition + padSize < Console.WindowHeight)
@@ -133,6 +193,23 @@ namespace Tennis
                 secondPlayerPosition++;
             }
         }
+        
+        static void PlayerComputer()
+        {
+            int randomNumber = randomGenerator.Next(0, 3);
+            if (randomNumber != 1)
+            {
+                if (ballDirectionUp && ballPositionX < Console.WindowWidth/2 && !ballDirectionRight)
+                {
+                    MoveFirstPlayerUp();
+                }
+                if(!ballDirectionUp && ballPositionX < Console.WindowWidth/2 && !ballDirectionRight)
+                {
+                    MoveFirstPlayerDown();
+                }
+            }
+        }
+        
         static void MoveBall()
         {
             if (ballPositionY == 0)
@@ -152,9 +229,12 @@ namespace Tennis
                 ResetAllPosition();
                 speed = 0;
                 Console.SetCursorPosition(Console.WindowWidth / 2 - 7, Console.WindowHeight / 2);
-                Console.WriteLine("Player one win!");
+                Console.WriteLine("Left player win!");
+                Console.SetCursorPosition(Console.WindowWidth / 2 - 7, Console.WindowHeight / 2 + 2);
+                Console.WriteLine("Press key to continue...");
                 Console.ReadKey();
             }
+        
             if (ballPositionX == 0)
             {
                 secondPlayerPoints++;
@@ -162,28 +242,33 @@ namespace Tennis
                 ballDirectionRight = false;
                 speed = 0;
                 Console.SetCursorPosition(Console.WindowWidth / 2 - 7, Console.WindowHeight / 2);
-                Console.WriteLine("Player two win!");
+                Console.WriteLine("Right player win!");
+                Console.SetCursorPosition(Console.WindowWidth / 2 - 7, Console.WindowHeight / 2 + 2);
+                Console.WriteLine("Press key to continue...");
                 Console.ReadKey();
             }
 
             if (ballPositionX < 2)
             {
-                if (ballPositionY >= firstPlayerPoints && ballPositionY <= firstPlayerPosition + padSize)
+                if (ballPositionY >= firstPlayerPosition-1 && ballPositionY <= firstPlayerPosition + padSize)
                 {
                     Console.Beep(586, 26);
                     ballDirectionRight = true;
+                    ballPositionX++;
                     if (speed < 25)
                     {
                         speed += 2.5;
                     }
                 }
             }
+            
             if (ballPositionX > Console.WindowWidth - 3)
             {
-                if (ballPositionY >= secondPlayerPosition && ballPositionY <= secondPlayerPosition + padSize) 
+                if (ballPositionY >= secondPlayerPosition-1 && ballPositionY <= secondPlayerPosition + padSize) 
                 {
                     Console.Beep(586, 26);
                     ballDirectionRight = false;
+                    ballPositionX--;
                     if (speed < 25)
                     {
                         speed += 2.5;
@@ -199,6 +284,7 @@ namespace Tennis
             {
                 ballPositionY++;
             }
+            
             if (ballDirectionRight)
             {
                 ballPositionX++;
