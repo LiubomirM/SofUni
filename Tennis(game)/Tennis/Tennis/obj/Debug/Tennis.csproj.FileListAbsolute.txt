@@ -1,0 +1,12 @@
+C:\Users\Lubo\Desktop\Tennis\Tennis\bin\Debug\Tennis.exe.config
+C:\Users\Lubo\Desktop\Tennis\Tennis\bin\Debug\Tennis.exe
+C:\Users\Lubo\Desktop\Tennis\Tennis\bin\Debug\Tennis.pdb
+C:\Users\Lubo\Desktop\Tennis\Tennis\obj\Debug\Tennis.csprojResolveAssemblyReference.cache
+C:\Users\Lubo\Desktop\Tennis\Tennis\obj\Debug\Tennis.exe
+C:\Users\Lubo\Desktop\Tennis\Tennis\obj\Debug\Tennis.pdb
+D:\SoftUni\Tennis\Tennis\bin\Debug\Tennis.exe.config
+D:\SoftUni\Tennis\Tennis\obj\Debug\Tennis.exe
+D:\SoftUni\Tennis\Tennis\obj\Debug\Tennis.pdb
+D:\SoftUni\Tennis\Tennis\bin\Debug\Tennis.exe
+D:\SoftUni\Tennis\Tennis\bin\Debug\Tennis.pdb
+D:\SoftUni\Tennis\Tennis\obj\Debug\Tennis.csprojResolveAssemblyReference.cache
