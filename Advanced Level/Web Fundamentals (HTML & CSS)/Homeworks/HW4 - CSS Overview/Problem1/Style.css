@@ -1,0 +1,99 @@
+body {
+	background-color: #019247;
+	font-family: Tahoma;
+}
+table {
+	border: 2px solid black;
+	border-radius: 15px;
+	margin: 20px auto;
+	border-spacing: 0;
+}
+th, td {
+  padding: 7px;
+  border: 1px solid black;
+  height: 35px;
+}
+th {
+	background-color: #f8c816;
+	font-size: 25px;
+}
+tr:nth-child(even) {
+	background: #CCC
+}
+tr:nth-child(odd) {
+	background: #FFF
+}
+th:first-child {
+  border-top-left-radius: 14px;
+}
+
+th:last-child {
+  border-top-right-radius: 14px;
+}
+
+tr:last-child > td:first-child {
+  border-bottom-left-radius: 14px;
+}
+
+tr:last-child > td:last-child {
+  border-bottom-right-radius: 14px;
+}
+
+.host{
+	text-align: right;
+	width: 150px;
+}
+.result, .group{
+	text-align: center;
+}
+.guest{
+	text-align: left;
+}
+select {
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+  padding-left: 2px;
+  font-size: 16px;
+}
+button {
+  width: 33px;
+  height: 33px;
+  border: none;
+  border-radius: 17px;
+  background: url(img/bet-button.png) no-repeat;
+}
+p {
+  margin: 0px;
+}
+#brasil p:after{
+	content: url(img/brasil-flag.png);
+}
+#spain p:after{
+	content: url(img/spain-flag.png);
+}
+#italy p:after{
+	content: url(img/italy-flag.png);
+}
+#argentina p:after{
+	content: url(img/argentina-flag.png);
+}
+#germany p:after{
+	content: url(img/germany-flag.png);
+}
+
+#mexico p:before{
+	content: url(img/mexico-flag.png);
+}
+#netherlands p:before{
+	content: url(img/netherlands-flag.png);
+}
+#england p:before{
+	content: url(img/england-flag.png);
+}
+#bah p:before{
+	content: url(img/bah-flag.png);
+}
+#portugal p:before{
+	content: url(img/portugal-flag.png);
+}

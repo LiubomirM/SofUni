@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Flight Order</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<form>
+			<fieldset class="inputs">
+				<legend class="title">
+					<h1>Flight Order</h1>
+				</legend>
+				
+				<div class="form-row">
+					<div class="left-col">
+						<label for="From">From</label>
+						
+						<select name="From" id="From" required="true">
+							<option value="Enter a City type" selected="">Enter a City</option>
+							<option value="City type 1">City 1</option>
+							<option value="City type 2">City 2</option>
+							<option value="City type 3">City 3</option>
+							<option value="City type 4">City 4</option>
+							<option value="City type 5">City 5</option>
+							<option value="City type 6">City 6</option>
+							<option value="City type 7">City 7</option>
+						</select>
+					</div>
+
+					<div class="right-col">
+						<label for="To">To</label>
+						
+						<select name="To" id="To" required="true">
+							<option value="Eity a Class type" selected="">Enter a City</option>
+							<option value="City type 1">City 1</option>
+							<option value="City type 2">City 2</option>
+							<option value="City type 3">City 3</option>
+							<option value="City type 4">City 4</option>
+							<option value="City type 5">City 5</option>
+							<option value="City type 6">City 6</option>
+							<option value="City type 7">City 7</option>
+						</select>
+
+						<div class="checkbox">
+							<input type="checkbox" class="checkbox" name="Prefer-directs" id="prefer-directs">
+							<label for="prefer-directs">Prefer-directs</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="left-col">
+						<label for="departure-date">Departure Date</label>
+						<input class="data" type="date" name="departure-date" id="departure-date" placeholder="09.06.2014" required="true">
+					</div>
+
+					<div class="right-col">
+						<label class="legend">Time Interval</label>
+						<input class="col-one" type="time" name="departure-time-start" id="departure-time-start" placeholder="00:20" required="true">
+						<input class="col-two" type="time" name="departure-time-end" id="departure-time-end" placeholder="05:00" required="true">
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="left-col">
+						<label for="return-date">Return Date</label>
+						<input class="data" type="date" name="return-date" id="return-date" placeholder="09.06.2014" required="true">
+					</div>
+
+					<div class="right-col">
+						<label class="legend">Time Interval</label>
+						<input class="col-one" type="time" name="return-time-start" id="return-time-start" placeholder="00:20" required="true">
+						<input class="col-two" type="time" name="return-time-end" id="return-time-end" placeholder="05:00" required="true">
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="left-col">
+						<div class="col">
+							<label for="12-or-bigger">12+</label>
+							<input class="col-three" type="number" name="12-or-bigger" id="12-or-bigger" min="1" max="50" required="true">
+						</div>
+						
+						<div class="col">
+							<label for="2-to-12">2-12</label>
+							<input class="col-three" type="number" name="2-to-12" id="2-to-12" min="1" max="50" required="true">
+						</div>
+						
+						<div class="col">
+							<label for="0-to-2">0-2</label>
+							<input class="col-three" type="number" name="0-to-2" id="0-to-2" min="1" max="50" required="true">
+						</div>
+					</div>
+
+					<div class="right-col">
+						<label for="flight-class">Choose class</label>
+						
+						<select name="flight-class" id="flight-class" required="true">
+							<option value="Economy" selected="">Economy</option>
+							<option value="Class type 1">Class 1</option>
+							<option value="Class type 2">Class 2</option>
+							<option value="Class type 3">Class 3</option>
+							<option value="Class type 4">Class 4</option>
+						</select>
+					</div>
+				</div>
+
+			</fieldset>
+
+			<div class="button">
+				<button>Search</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+	font-family: Tahoma;
+	background-color: #00FFFF;
+}
+#wrapper {
+	width: 800px;
+	margin: 10px auto;
+}
+header {
+	height: 120px;
+}
+h1 {
+	color: #234465;
+	margin-left: 15px;
+	padding-top: 10px;
+	font-size: 1.5em
+}
+p {
+	color: #999;
+	margin-left: 15px;
+	padding-bottom: 25px;
+	font-size: 0.8em
+}
+.register > label {
+	margin-left: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #777;
+	font-size: 0.95em;
+}
+.register > label > span {
+	color: #234465;
+}
+.register {
+	width: 350px;
+	float: left;
+}
+.register input {
+	width: 300px;
+	height: 30px;
+	margin-left: 25px;
+	margin-top: 15px;
+}
+.register .reg-button {
+	width: 150px;
+	height: 33px;
+	border: 2px #234465 solid;
+	color: #234465;
+	background-color: #00FFFF;
+	margin-left: 179px;
+}
+.login {
+	width: 330px;
+	height: 280px;
+	background-color: #234465;
+	float: left;
+	margin-top: -10px;
+}
+.login > label{
+	margin-left: 15px;
+	text-transform: uppercase;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 0.95em;
+}
+.login input {
+	margin-left: 15px;
+	margin-top: 15px;
+	width: 300px;
+	height: 30px;
+}
+.login .check {
+	
+	width: 20px;
+	height: 20px;
+}
+.login .log-button{
+	width: 130px;
+	height: 33px;
+	border: 2px #FA0 solid;
+	background-color: #234465;
+	margin-left: 190px;
+	margin-top: -10px;
+	color: #fff;
+}
+.login span {
+	color: #FFF;
+	vertical-align: super;
+	font-size: 0.8em;
+}
+a {
+	color: #fff;
+	margin-left: 210px;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+div:after {
+	clear: both;
+}

@@ -1,0 +1,134 @@
+@font-face {
+    font-family: RicksAmericanNF;
+    src: url(RicksAmericanNF.ttf);
+}
+
+body {
+	color: #FFA700;
+	background-color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-shadow: 2px 2px #000;
+}
+#wrapper {
+	width: 960px;
+	height: 880px;
+	margin: 0 auto;
+	background-color: #3C3C3C;
+}
+header {
+	height: 150px;
+	background-color: #000;
+}
+h1 {
+	font-family: RicksAmericanNF;
+	text-transform: uppercase;
+	letter-spacing: 20px;
+	color: #FFA700;
+	font-size: 60px;
+	margin: 0;
+	margin-left: 20px;
+}
+h2 {
+	font-size: 23px;
+	text-transform: uppercase;
+	text-align: center;
+}
+ul {
+	font-family: RicksAmericanNF;
+	list-style: none;
+}
+ul>li{
+	display: inline-block;
+	
+	border-radius: 20px;
+}
+ul>li>a {
+	color: #FFA700;
+	text-decoration: none;
+	padding-left: 65px;
+	padding-right: 65px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 30px;
+}
+img {
+	padding-left: 30px;
+	padding-right: 5px;
+    width:300px; 
+    height: auto;
+    float: left;
+}
+.left-side {
+	width: 600px;
+	float: left;
+}
+.container {
+	display: block;
+	height: 240px;
+}
+.text {
+	text-align: justify;
+}
+span>a {
+	color: #FFA700;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: bold;
+}
+.right-side {
+	float: right;
+	padding-right: 45px;
+	padding-top: 20px;
+}
+
+#linked {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+	width: 220px;
+	border-radius: 10px;
+	border: 1px solid #FFA700;
+}
+.text-link {
+	text-align: center;
+	color: #FFA700;
+	position: absolute;
+	top: 335px;
+	height: 20px;
+	width: 222px;
+	font-weight: bold;
+	background-color: rgba(0,0,0,0.6);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.text-link1 {
+	text-align: center;
+	color: #FFA700;
+	position: absolute;
+	top: 481px;
+	height: 20px;
+	width: 222px;
+	font-weight: bold;
+	background-color: rgba(0,0,0,0.6);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+ul>li>a:hover {
+	background-color: #FFA700;
+	color: #000;
+	border-radius: 20px;
+	text-shadow:none;
+}
+.text-link:hover, .text-link1:hover {
+	background-color: #FFA700;
+	color: #722B00;
+	text-shadow:none;
+}
+
+#bottom {
+	text-align: center;
+	padding-top: 10px;
+	color: #FCDB5C;
+}

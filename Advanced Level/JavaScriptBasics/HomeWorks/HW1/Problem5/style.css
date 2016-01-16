@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial;
+    text-align: center;
+}
+
+body div#wrapper table {
+    width: 600px;
+    height: 600px;
+}
+
+body div#wrapper table tr td {
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    font-size: 150px;
+    border-right: 10px solid #000;
+    border-bottom: 10px solid #000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+body div#wrapper table tr:nth-child(3) td {
+    border-bottom: none;
+}
+
+body div#wrapper table tr td:nth-child(3) {
+    border-right: none;
+}

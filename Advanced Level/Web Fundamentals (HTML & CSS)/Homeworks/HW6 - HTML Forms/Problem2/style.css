@@ -1,0 +1,69 @@
+body {
+	background-color: #A51;
+	font-family: Tahoma;
+}
+#wrapper {
+	width: 500px;
+	margin: 10px auto;
+	background-color: #CCC;
+}
+fieldset {
+	border: none;
+}
+.title {
+	margin: 0 auto;
+}
+h1 {
+	font-size: 2em;
+	font-style: italic;
+	text-transform: uppercase;
+}
+.form-row {
+	height: 60px;
+}
+label {
+	font-style: italic;
+	font-size: 0.7em;
+}
+.left-col {
+	float: left;
+}
+.right-col {
+	float: right;
+}
+.col-one {
+	float: left;
+	width: 108px;
+}
+.col-two {
+	float: right;
+	width: 108px;
+}
+select {
+	width: 230px;
+}
+input, label {
+	display: block;
+}
+.right-col .col-one, .right-col .col-two {
+	margin: inherit;
+	margin-left: 5px;
+}
+.left-col .data {
+	width: 225px;
+}
+.col {
+	float: left;
+}
+.col-three {
+	width: 69px;
+	margin-right: 5px;
+}
+.button button{
+	width: 230px;
+	height: 30px;
+	margin-left: 255px;
+}
+fieldset:after {
+	clear: both;
+}

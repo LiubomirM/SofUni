@@ -1,0 +1,18 @@
+body {
+	background-image: url("Images/background.jpg");
+	background-size: 100%;
+}
+#wrapper {
+	width: 800px;
+	background-color: rgba(255,255,255, 0.3);
+	border-radius: 50px;
+	margin: 0 auto;
+}
+ul>li {
+	display: inline-block;
+}
+ul>li>a {
+	text-decoration: none;
+	padding-left: 50px;
+	padding-right: 50px;
+}

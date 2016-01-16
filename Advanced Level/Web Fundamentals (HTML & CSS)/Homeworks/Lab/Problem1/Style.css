@@ -1,0 +1,173 @@
+body {
+	line-height: 150%;
+	font-size: 16px;
+	font-family: Verdana, Tahoma, sans-serif;
+}
+h1 {
+	font-size: 2.5em;
+	margin: 15px 0;
+}
+h3 {
+	font-size: 1.5em;
+	margin: 0 0 5px 0;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+.nav-search-box {
+	margin-top: 50px;
+}
+nav, nav > ul > li {
+	display: inline-block;
+}
+nav > ul > li {
+	margin: 0 20px;
+}
+nav > ul > li:first-child {
+	margin-left: 0;
+}
+a {
+	text-decoration: none;
+	color: #037CCE;
+}
+nav a {
+	text-decoration: none;
+	color: #999;
+	text-transform: uppercase;
+}
+input {
+	float: right;
+}
+header:after, main:after {
+	clear: both;
+}
+hr {
+	color: #999;
+}
+aside {
+	padding-left: 10px;
+	width: 190px;
+	float: left;
+}
+aside ul {
+	border-top: 1px solid #aaa;
+	padding-top: 10px;
+	margin-top: 20px;
+}
+aside ul li {
+	padding: 5px;
+}
+main {
+	margin-top: 40px;
+}
+section {
+	width: 500px;
+	float: left;
+	margin-left: 30px;
+}
+.article-details {
+	color: #999;
+}
+article > header > div {
+	color: #999;
+	font-size: 0.7em;
+}
+article > header > div > span {
+	text-transform: uppercase;
+	border-bottom: 1px dashed #999;
+}
+p {
+	margin: 20px 0;
+}
+#language-box {
+	width: 180px;
+	color: #999;
+	margin-left: 30px;
+	text-transform: uppercase;
+	font-size: 0.7em;
+}
+.language {
+	padding-bottom: 5px;
+	border-bottom: 1px solid;
+	margin-bottom: 10px;
+}
+.blogroll {
+	padding-bottom: 5px;
+	border-bottom: 1px solid;
+	margin-top: 30px;
+	font-size: 1.3em;
+}
+select {
+	margin-left: 3px;
+}
+section>p {
+	margin-top: 40px;
+}
+footer {
+	background-color: black;
+	color: #fff;
+    position: bottom;
+    height: 280px;
+    width: 100%;
+    overflow:hidden;
+}
+.footer-first-line {
+	font-style: italic;
+	background-color: #eefeee;
+	color: #999;
+	padding: 15px;
+	padding-left: 70px;
+}
+.footer-bgjug {
+	color: #fff;
+	width: 220px;
+	font-size: 1.5em;
+	padding-left: 30px;
+	padding-top: 20px;
+	float: left;
+}
+.footer-pages {
+	width: 220px;
+	padding-left: 30px;
+	float: left;
+}
+footer a {
+	color: #fff;
+}
+footer p {
+	text-transform: uppercase;
+}
+footer span {
+	color: #999;
+	font-size: 0.8em;
+}
+.footer-pages>ul>li{
+	padding-left: 5px;
+	margin-bottom: 5px;
+}
+.footer-the-latest {
+	width: 220px;
+	padding-left: 30px;
+	float: left;
+}
+.footer-more {
+	width: 220px;
+	padding-left: 30px;
+	float: left;
+}
+.footer-more>span {
+	font-size: 1em;
+}
+.footer-last {
+	float: left;
+	width: 200px;
+	padding-left: 30px;
+	padding-top: 20px;
+	color: #999;
+}
+
+footer:after {
+	clear: both;
+}
