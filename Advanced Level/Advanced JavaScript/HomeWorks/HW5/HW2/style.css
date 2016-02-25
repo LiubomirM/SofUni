@@ -1,0 +1,16 @@
+
+
+@keyframes animatedBackground {
+    from { background-position: 100% 0; }
+    to { background-position: -820% 0; }
+}
+
+#animate-area	{
+    width: auto;
+    height: 700px;
+    background-image: url(images/des.jpg);
+    background-position: 110px 110px;
+    background-repeat: repeat-x;
+
+    animation: animatedBackground 8s linear infinite;
+}
